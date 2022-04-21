@@ -49,10 +49,16 @@ Figure 3: 2013 Trap/Spray locations with Overlapping 1.3km radii for WNV+ traps
 
 **Recommendations**  
 Based on the AdaBoostClassifier predictions and it's identified feature importances, here are our recommendations:  
+
 •	Identify corresponding positive traps with Lat, long values
+
 •	Commence spraying in a radius of 1.3km around these traps a month in advance prior.
+
 •	Maintain regular spray intervals of no longer than two weeks.
-•	Coinciding traps with positive traps in its vicinity of 1.3km should also be sprayed due to the median flight range 	    of WNV carrying mosquito species.
+
+•	Coinciding traps with positive traps in its vicinity of 1.3km should also be sprayed due to the median flight range 	
+of WNV carrying mosquito species.
+
 •	Improve trap laying procedures by standardizing trap locations
 
 **Conclusion**  
