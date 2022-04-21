@@ -43,28 +43,35 @@ AdaBoost was evaluated to be the best predictor model with a recall score of 0.9
 ## 3. EDA Preview  
 [Return to top](#Table-of-Contents)  
 
-![](https://github.com/andretch/GA_project_4/blob/master/images/traps.gif)
+![](https://github.com/andretch/GA_project_4/blob/master/images/traps.gif)  
 Figure 1: Traps Visualization
-
-Observations for traps YOY  
-20XX:Map layer controls checked* : 20XX Positive Traps | 20XX Negative Traps  
-- Trap numbers fluctuate YOY, positions of traps also shift across years  
-- This results in fluctuating measurements of mosquito populations across years, which makes it more problematic when trying to identify areas which are prone of WNV+ (if location is standardized across years, we can identify areas/clusters through tracking prior WNV positive counts in previous years).  
-
-Observations for Coinciding Traps and Sprays  
-- 2011: Map layer controls checked* : 2011 Positive Traps | 2011 Sprays  
-Based on the visualization, we see only one trap location(T223) have coincided with the spraying efforts. As the spraying was conducted on 07-09-2011, lets take a look at the trap information prior to spraying date.  
-
-2013: Map layer controls checked* : 2013 Positive Traps | 2013 Sprays  
-- 2013 was a year where there were significantly more coinciding sprays with traps with coverage within the 1.3km radius of their coinciding traps. There were two areas (Garfield Park, Greater Grand Crossing) where the decision made for spraying may not have been caused by the observations made through the traps.  
-
-![](https://github.com/andretch/GA_project_4/blob/master/images/index.html)
-Figure 2: Spray Visualization
 
 ## 4. Recommendations and Conclusion  
 [Return to top](#Table-of-Contents)  
 
+**Recommendations**  
+Based on the AdaBoostClassifier predictions and it's identified feature importances, here are our recommendations:  
 
+- Identify corresponding traps with lat,long values and commence spraying in a radius of 1.3km around these traps a month in advance prior, with attention given to maintain spray intervals of not longer than two weeks.  
+- Positive traps which have another trap in it's vincinity of 1.3km should also be sprayed due to the flight ranged previously researched (referenced in combined EDA notebook) on WNV carrying species (Restuans/ Pipiens).  
+- Better trap laying procedures (Standardized trap locations)  
+It was observed during the EDA process that trap locations are seldom similar across years, which might hinder proper identification of areas prone to WNV (consecutive years of WNV+ during peak seasons).  
+- Provision of data in increased quality and quantities  
+Data provided for our model to be trained on were only for months to be peak season, it would be better to provide the full range of data for an entire year. Should traps no be tested during winter months, methods can be used to impute the values of these traps ( 0 or mean for past/present year) to better account for the variability of weather data for a given trap.  
+
+
+**Conclusion**  
+In this project, we cleaned and explored the traps, spray and weather data of Chicago to learn about how each of them plays a part with regards to the mosquito population in Chicago and its relationship to the presence of West Nile Virus(Wnv). Using learned relationships during EDA and visualizations, using the data science process we also used a selection of classifiers to predict potential positive traps to serve as a guide for timely effective allocation of resources.  
+
+The classsification model we trained gave us a decent ROC-AUC score of ~0.778, and very good recall score of ~0.901. We also learned about possible pitfalls when our scores can be seem optimistic but not necessarily predict well on future data when the look ahead bias is introduced.  
+
+In the cost-benefit analysis(CBA) we also explored the quantification of cost when a positive trap misclassified as negative as well as a negative trap misclassfied as positive. Additionally, the CBA also covered the breakeven point in terms of number of WNV cases prevent as a result of spraying for cost justification. We also covered the intangible aspects of the WNV such as the grief and disruption in brings to patients. The potential of WNV to bring about severe life-threathening diseases/risk of permanent disability also highlights the importance of prevention rather than cure as every life lost/ severely disrupted due to WNV is one too many.  
+ 
+https://www.cdc.gov/westnile/prevention/index.html  
 
 ## 5. Future Steps  
 [Return to top](#Table-of-Contents)  
+
+As mentioned in the CBA, in order to identify which traps to prioritise spraying, we would need more information based on the actual estimates of population density by neighbourhood or district to better estimate the number of people covered by a trap radius of 1.3km, as opposed to the entire population count of Chicago over the area of Chicago.
+Since WNV is spread through vectors like mosquitoes and other animals like bird and horses, we can also flag parks, stables and ranches as potential harbours of WNV+, traps placed near sites such animals which are flagged positive can give an indication as to whether animals are carrying the virus.
+We can also look to identify the unidentified species of mosquitoes as there might be new species which are capable of carrying the virus in future.
