@@ -20,7 +20,7 @@ Datasets Used:
 - train.csv
 - test.csv
 
-## 2. Executive Summary  
+## 2. Data Science Workflow  
 [Return to top](#Table-of-Contents)  
 
 Following the Data Science workflow:  
