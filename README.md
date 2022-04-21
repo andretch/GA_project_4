@@ -37,9 +37,11 @@ Following the Data Science workflow:
 Figure 1: Traps Visualization (Across years 2007,2009,2011,2013)
 
 ![](https://github.com/andretch/GA_project_4/blob/master/images/2011%20trap%20spray%20overlap.png)
+
 Figure 2: 2011 Trap/Spray locations with Overlapping 1.3km radii for WNV+ traps
 
 ![](https://github.com/andretch/GA_project_4/blob/master/images/2013%20trap%20spray%20overlap.PNG)
+
 Figure 3: 2013 Trap/Spray locations with Overlapping 1.3km radii for WNV+ traps
 
 ## 4. Recommendations and Conclusion  
