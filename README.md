@@ -66,6 +66,7 @@ In this project, we cleaned and explored the traps, spray and weather data of Ch
 The chosen model gave a decent ROC-AUC score of ~0.778, and very good recall score of ~0.901. Through the modelling process, we also learned about possible pitfalls when our scores can seem optimistic but may not necessarily generalize well on future data when look ahead bias is introduced in the training process.
 In the cost-benefit analysis (CBA) we were able to extrapolate costs from previous studies done on Sacramento County to Chicago. With costs adjusted for inflation we were able to estimate that CDPH look to save ~$640 in medical costs $1 spent on sprays.
  The potential of WNV to bring about life-threatening complications also highlights the importance of prevention rather than cure as every life lost/ severely disrupted due to WNV is one too many.
+ 
 https://www.cdc.gov/westnile/prevention/index.html
   
 ## 5. Future Steps  
